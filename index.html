@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>⚽ C.E.C VILA BELO HORIZONTE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>⚽ C.E.C VILA BELO HORIZONTE 🔥</h1>
+
+  <!-- ===== HOME ===== -->
+  <div id="homeScreen">
+    <button onclick="mostrarTime()">📅 Partidas</button>
+    <button onclick="mostrarJogadores()">👟 Jogadores</button>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- =================== PARTIDAS ======================== -->
+  <!-- ===================================================== -->
+
+  <div id="timeScreen" class="hidden">
+
+    <h2>📅 Registro de Partidas</h2>
+
+    <!-- 🔐 ÁREA DE SENHA -->
+    <div id="senhaArea">
+      <input type="password" id="senhaInput" placeholder="🔐 Senha ADM">
+      <button onclick="validarSenha()">Validar</button>
+    </div>
+
+    <!-- ➕ BOTÃO DE INCLUIR (só aparece após validar senha) -->
+    <button id="btnAddPartida" class="hidden" onclick="mostrarFormPartida()">
+      ➕ Incluir Nova Partida
+    </button>
+
+    <!-- 📝 FORMULÁRIO (fica escondido até clicar em incluir) -->
+    <div id="formPartida" class="hidden card">
+
+      <input type="date" id="data">
+
+      <input type="text" id="adversario" placeholder="Nome do adversário">
+
+      <input type="number" id="golsTime" placeholder="Gols C.E.C">
+
+      <input type="number" id="golsAdversario" placeholder="Gols adversário">
+
+      <select id="resultado">
+        <option value="Vitória">🏆 Vitória</option>
+        <option value="Empate">🤝 Empate</option>
+        <option value="Derrota">❌ Derrota</option>
+      </select>
+
+      <button onclick="adicionarPartida()">💾 Salvar Partida</button>
+
+    </div>
+
+    <!-- 📋 LISTA DE PARTIDAS -->
+    <ul id="listaPartidas"></ul>
+
+    <button onclick="voltar()">⬅ Voltar</button>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- =================== JOGADORES ======================= -->
+  <!-- ===================================================== -->
+
+  <div id="jogadorScreen" class="hidden">
+
+    <h2>👟 Cadastro de Jogadores</h2>
+
+    <!-- 🔐 SENHA -->
+    <div id="senhaJogadorArea">
+      <input type="password" id="senhaJogador" placeholder="🔐 Senha para editar">
+      <button onclick="validarSenhaJogador()">Validar</button>
+    </div>
+
+    <!-- ➕ BOTÃO INCLUIR -->
+    <button id="btnAddJogador" class="hidden" onclick="mostrarFormJogador()">
+      ➕ Incluir Novo Jogador
+    </button>
+
+    <!-- 📝 FORMULÁRIO JOGADOR -->
+    <div id="formJogador" class="hidden card">
+
+      <input type="text" id="nome" placeholder="Nome do jogador">
+
+      <input type="number" id="gols" placeholder="Gols iniciais">
+
+      <input type="number" id="assist" placeholder="Assistências iniciais">
+
+      <button onclick="adicionarJogador()">💾 Salvar Jogador</button>
+
+    </div>
+
+    <!-- 🔥 RANKINGS -->
+    <h3>🔥 Artilheiro</h3>
+    <div id="topGols" class="destaque"></div>
+
+    <h3>🎯 Líder Assistências</h3>
+    <div id="topAssist" class="destaque"></div>
+
+    <!-- 📋 LISTA -->
+    <ul id="listaJogadores"></ul>
+
+    <button onclick="voltar()">⬅ Voltar</button>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

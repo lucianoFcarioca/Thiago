@@ -1,0 +1,8 @@
+{
+  "name": "Painel do Time",
+  "short_name": "Time",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#141e30",
+  "theme_color": "#ff9800"
+}
