@@ -1,8 +1,21 @@
 {
-  "name": "Painel do Time",
-  "short_name": "Time",
-  "start_url": "index.html",
+  "name": "C.E.C VILA BELO HORIZONTE",
+  "short_name": "CEC",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#141e30",
-  "theme_color": "#ff9800"
+  "theme_color": "#ff9800",
+  "icons": [
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
