@@ -1,4 +1,8 @@
-const SENHA = "THIAGO_PADRINHO_LAURA";
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./service-worker.js");
+}
+
+const SENHA = "THIAGO@@@";
 
 let dados = {
   partidas: [],
